@@ -3,28 +3,28 @@
     "name": "Kalai",
     "role": "Full stack development",
     "text": "Best place to learn full stack development. The course structure and mentoring are excellent.",
-    "image": "/students/kalai.jpg",
+    "image": "/kalai.jpg",
     "linkedin": "https://www.linkedin.com/in/kalaiyarasan-c/"
   },
   {
     "name": "Harsha",
     "role": "Frontend Development",
     "text": "Cobenoinfotech training was amazing. Trainers explain every concept clearly and support throughout.",
-    "image": "/students/harsha.jpg",
+    "image": "/harsha.jpg",
     "linkedin": "https://www.linkedin.com/in/harsha-vardhini-3a7476324/"
   },
   {
     "name": "Harini",
     "role": "React Development",
     "text": "Perfect place to learn React and Next.js. Real-time projects and assignments made me confident in frontend development.",
-    "image": "/students/harini.jpg",
+    "image": "/harini.jpg",
     "linkedin": "https://www.linkedin.com/in/harini-s-522889390/"  
   },
   {
     "name": "Lokeshwaran ",
     "role": "MERN Stack Development",
     "text": "Best place to learn MERN stack. The course structure and mentoring are excellent.",
-    "image": "/students/lokeshwaran.jpg",
+    "image": "/lokeshwaran.jpg",
     "linkedin": "https://www.linkedin.com/in/lokeshwaran/"
   },
 
@@ -32,7 +32,7 @@
     "name": "Dharaniswaran",
     "role": "Backend Development",
     "text": "Backend concepts were taught clearly with real-time examples. Trainers are very supportive.",
-    "image": "/students/dharaniswaran.jpg",
+    "image": "/dharaniswaran.jpg",
     "linkedin": "https://www.linkedin.com/in/dharaniswaran-s/"
   }
 
