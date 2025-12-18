@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 export default function CTA() {
   return (
-    <div className="mt-20 rounded-3xl bg-gradient-to-r from-[#4f46e5] to-[#9333ea] px-6 py-8 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-white">
+    <div className="mt-20 rounded-3xl bg-blue-800 px-6 py-8 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-white">
       
       {/* TEXT */}
       <div className="text-center md:text-left">
@@ -28,7 +28,7 @@ export default function CTA() {
           href="https://wa.me/919361430865"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full sm:w-auto px-6 py-3 rounded-xl bg-green-500 hover:bg-green-400 transition inline-flex items-center justify-center gap-2 font-semibold"
+          className="w-full sm:w-auto px-6 py-3 rounded-xl bg-green-400 hover:bg-green-400 transition inline-flex items-center justify-center gap-2 font-semibold"
         >
           <MessageCircle size={18} className="text-white" />
           WhatsApp

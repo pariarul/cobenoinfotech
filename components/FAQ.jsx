@@ -3,10 +3,6 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import dynamic from "next/dynamic";
-
-// Disable SSR for 3D FAQ component
-const FAQ3DProduct = dynamic(() => import("@/components/FAQ3DProduct"), { ssr: false });
 
 const faqs = [
   {
@@ -41,65 +37,59 @@ export default function FAQSection() {
 
   return (
     <section className="py-16 lg:py-24 bg-gray-50 dark:bg-neutral-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-start">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* LEFT SIDE: FAQ */}
-        <div className="flex flex-col gap-8 order-2 lg:order-1">
-          <div className="text-center lg:text-left mb-16">
-            <h2 className="text-blue-600 dark:text-blue-400 font-semibold uppercase text-sm mb-2">
-              FAQ
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-              Frequently Asked Questions
-            </h3>
-            <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl">
-              Everything you need to know about our services, training programs, and support.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-white/10 overflow-hidden"
-              >
-                <button
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full flex items-center justify-between p-6 text-left"
-                >
-                  <span className="font-semibold text-gray-900 dark:text-white pr-8">
-                    {faq.question}
-                  </span>
-                  {openIndex === index ? (
-                    <Minus className="text-blue-600 shrink-0" size={20} />
-                  ) : (
-                    <Plus className="text-gray-400 shrink-0" size={20} />
-                  )}
-                </button>
-
-                <AnimatePresence>
-                  {openIndex === index && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
-                        {faq.answer}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </div>
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-blue-600 dark:text-blue-400 font-semibold uppercase text-sm mb-2">
+            FAQ
+          </h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+            Frequently Asked Questions
+          </h3>
+          <p className="mt-4 text-gray-600 dark:text-gray-400">
+            Everything you need to know about our services, training programs, and support.
+          </p>
         </div>
 
-        {/* RIGHT SIDE: 3D Hero */}
-        <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[700px] flex items-center justify-center order-1 lg:order-2">
-          <FAQ3DProduct />
-          <div className="absolute inset-0 bg-gradient-to-tr from-blue-100/50 to-transparent rounded-full blur-2xl -z-10" />
+        {/* FAQ List */}
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-white/10"
+            >
+              <button
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="w-full flex items-center justify-between p-6 text-left"
+              >
+                <span className="font-semibold text-gray-900 dark:text-white">
+                  {faq.question}
+                </span>
+
+                {openIndex === index ? (
+                  <Minus className="text-blue-600 shrink-0" size={20} />
+                ) : (
+                  <Plus className="text-gray-400 shrink-0" size={20} />
+                )}
+              </button>
+
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                  >
+                    <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
         </div>
 
       </div>

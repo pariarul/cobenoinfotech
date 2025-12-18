@@ -4,40 +4,73 @@ import {
   CheckCircle,
   Clock,
   Users,
-  MessageCircle,
+  Code2,
 } from "lucide-react";
-import Link from "next/link";
 import CTA from "./CTA";
 
-const courses = [
+/* 🔹 Tech keyword → Icon mapping (DESIGN ONLY) */
+const techIcons = [
+  { key: "HTML", label: "HTML" },
+  { key: "CSS", label: "CSS" },
+  { key: "JavaScript", label: "JS" },
+  { key: "React", label: "React" },
+  { key: "Next", label: "Next.js" },
+  { key: "Node", label: "Node" },
+  { key: "Mongo", label: "MongoDB" },
+  { key: "Tailwind", label: "Tailwind" },
+  { key: "Express", label: "Express" },
+  { key: "Git", label: "Git" },
+  { key: "GitHub", label: "GitHub" },
+  { key: "Redux", label: "Redux"},
+  { key: "Material", label: "Material UI"},
+  { key: "UI/UX", label: "UI/UX"},
+  { key: "Components", label: "Components"},
+  { key: "Pages", label: "Pages"},
+  { key: "Routing", label: "Routing"},
+  { key: "API", label: "API"},
+  { key: "Authentication", label: "Authentication"},
+  { key: "Deployment", label: "Deployment"},
+  { key: "Testing", label: "Testing"},
+  { key: "Hooks", label: "Hooks"},
+  { key: "json", label: "json"},
+  { key: "npm", label: "npm"},
+  { key: "Axios", label: " Axios"},
+  { key: "JWT", label: "JWT"},
+  { key: "REST APIs", label: "REST APIs"},
+  { key: "Databases", label: "Databases"},
+  { key: "JavaScript", label: "JavaScript"},
+];
+
+const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */ 
   {
     title: "Full Stack Development",
     level: "Beginner to Advanced",
-    tech: "HTML, CSS, JavaScript, React, Node.js, MongoDB, Next.js, Tailwind CSS, Express, Git, GitHub",
+    tech: "HTML, CSS, JavaScript, React, Node.js, MongoDB, Next.js, Tailwind CSS, Express, Git, GitHub ,etc...",
     duration: "12 Weeks",
     students: "12+",
     price: "14500",
     features: [
       "Live Classes",
-      "Project-Based Learning",
-      "Job Placement Support",
-      "Resume Building",
-      "Portfolio Building",
+      "E-commerce Development",
+      "Live chat Project",
+      "Freelance Support",
+      "Hands-on Projects",
     ],
     popular: true,
   },
   {
     title: "Frontend Development",
     level: "Beginner to Advanced",
-    tech: "HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, UI/UX",
+    tech: "HTML, CSS, JavaScript, Tailwind CSS, Material UI, UI/UX Basics",
     duration: "4 Weeks",
-    students: "5+",
-    price: "7500",
+    students: "10+",
+    price: "3999",
     features: [
       "Live Classes",
-      "Project-Based Learning",
-      "Job Placement Support",
-      "Resume Building",
+      "Hands-on Projects",
+      "Portfolio Building",
+      "Resume Guidance",
+      "Interview Preparation",
     ],
   },
   {
@@ -46,102 +79,145 @@ const courses = [
     tech: "Node.js, Express, REST APIs, Authentication, JWT, Databases, Deployment",
     duration: "4 Weeks",
     students: "7+",
-    price: "6000",
+    price: "5999",
     features: [
       "Live Classes",
       "Project-Based Learning",
-      "Job Placement Support",
+      "API Basics",
+      "Real-time Examples",
+    ],
+  },
+  {
+    title: "React Development",
+    level: "Beginner to Advanced",
+    tech: "React, Hooks, Redux, Axios, npm, json, etc...",
+    duration: "4 Weeks",
+    students: "5+",
+    price: "2999",
+    features: [
+      "Live Classes",
+      "Project-Based Learning",
+      "API Basics",
+      "Real-time Examples",
+    ],
+  },
+  {
+    title: "Next JS Development",
+    level: "Beginner to Advanced",
+    tech: "Next.js,components, Routing, Pages, APIs, etc...",
+    duration: "4 Weeks",
+    students: "5+",
+    price: "2999",
+    features: [
+      "Live Classes",
+      "Project-Based Learning",
+      "API Basics",
+      "Real-time Examples",
     ],
   },
 ];
 
 export default function Training() {
   return (
-    <section id="training" className="py-16 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="training" className="bg-gradient-to-b from-white to-gray-50 py-16 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="text-center mb-16">
-        <h2 className="text-blue-600 dark:text-blue-400 font-semibold tracking-wide uppercase text-sm mb-2">
-              Training Courses
-            </h2>
+        <div className="mb-16 text-center">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-indigo-600">
+            Training Courses
+          </p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
             Practical Job-Oriented Training
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
             Build your tech career with real-time projects and expert mentorship.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {courses.map((course, index) => (
             <div
               key={index}
-              className={`relative p-[1.5px] rounded-2xl ${
+              className={`relative rounded-3xl p-[1.5px] ${
                 course.popular
-                  ? "bg-gradient-to-r from-[#4f46e5] to-[#9333ea]"
+                  ? "bg-gradient-to-r from-indigo-600 to-purple-600"
                   : "bg-gray-200"
               }`}
             >
-              <div className="h-full flex flex-col bg-white rounded-2xl p-8">
+              <div className="flex h-full flex-col rounded-3xl bg-white/90 backdrop-blur p-8 shadow-sm">
 
                 {course.popular && (
-                  <span className="absolute -top-3 right-6 px-4 py-1 text-xs font-bold text-white rounded-full bg-gradient-to-r from-[#4f46e5] to-[#9333ea] shadow-lg">
+                  <span className="absolute -top-3 right-6 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-1 text-xs font-bold text-white shadow-lg">
                     MOST POPULAR
                   </span>
                 )}
 
-                <span className="inline-block mb-3 text-xs font-semibold text-[#4f46e5] bg-[#4f46e5]/10 px-3 py-1 rounded-full">
+                <span className="mb-3 inline-flex w-fit items-center gap-2 rounded-full bg-indigo-600/10 px-3 py-1 text-xs font-semibold text-indigo-600">
+                  <Code2 size={14} />
                   {course.level}
                 </span>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="mb-2 text-xl font-bold text-gray-900">
                   {course.title}
                 </h3>
 
-                <p className="text-sm text-gray-500 mb-6">
-                  {course.tech}
-                </p>
+                {/* 🔹 TECH ICON CHIPS */}
+                <div className="mb-5 flex flex-wrap gap-2">
+                  {techIcons
+                    .filter(t => course.tech.includes(t.key))
+                    .map((t, i) => (
+                      <span
+                        key={i}
+                        className="rounded-lg border border-gray-200 bg-gray-50 px-2 py-1 text-xs font-medium text-gray-700"
+                      >
+                        {t.label}
+                      </span>
+                    ))}
+                </div>
 
-                <div className="flex gap-6 text-sm text-gray-600 mb-6">
+                <div className="mb-6 flex gap-6 text-sm text-gray-600">
                   <div className="flex items-center gap-2">
-                    <Clock size={16} className="text-[#4f46e5]" />
+                    <Clock size={16} className="text-indigo-600" />
                     {course.duration}
                   </div>
                   <div className="flex items-center gap-2">
-                    <Users size={16} className="text-[#9333ea]" />
+                    <Users size={16} className="text-purple-600" />
                     {course.students}
                   </div>
                 </div>
 
-                <ul className="space-y-3 mb-8 flex-grow">
+                <ul className="mb-8 space-y-3 flex-grow">
                   {course.features.map((feature, i) => (
-                    <li key={i} className="flex gap-3 text-sm text-gray-600">
-                      <CheckCircle size={16} className="text-green-600 mt-0.5" />
+                    <li key={i} className="flex gap-3 text-sm text-gray-700">
+                      <CheckCircle size={16} className="mt-0.5 text-green-600" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
                 <div className="mt-auto">
-                  <p className="text-2xl font-extrabold text-gray-900 mb-4">
+                  <p className="mb-4 text-2xl font-extrabold text-gray-900">
                     ₹{course.price}
-                    <span className="text-sm text-gray-500 font-normal">
+                    <span className="text-sm font-normal text-gray-500">
+                      {" "}
                       / course
                     </span>
                   </p>
 
-                  <Link
-                    href="#contact"
-                    className={`block text-center py-3 rounded-xl font-semibold transition ${
+                  <a
+                    href="https://wa.me/919361430865"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block rounded-xl py-3 text-center font-semibold transition ${
                       course.popular
-                        ? "text-white bg-blue-700 hover:bg-blue-800"
+                        ? "bg-indigo-600 text-white hover:bg-indigo-700"
                         : "bg-gray-100 text-gray-900 hover:bg-gray-200"
                     }`}
                   >
-                    Register Now
-                  </Link>
+                    Register
+                  </a>
                 </div>
 
               </div>
@@ -149,9 +225,7 @@ export default function Training() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-     <CTA />
-
+        <CTA />
       </div>
     </section>
   );

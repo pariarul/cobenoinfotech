@@ -80,13 +80,13 @@ export default function Hero() {
 
           {/* BUTTONS */}
           <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-            <Link
-              href="#contact"
+            <a
+              href="tel:+919361430865"
               className="group relative inline-flex items-center bg-blue-800 justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-white shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               
             >
               Get a Quote <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
 
             <Link
               href="#training"
