@@ -212,8 +212,8 @@ export default function Training() {
                     rel="noopener noreferrer"
                     className={`block rounded-xl py-3 text-center font-semibold transition ${
                       course.popular
-                        ? "bg-indigo-600 text-white hover:bg-indigo-700"
-                        : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                        ? "bg-blue-800 text-white hover:bg-blue-700"
+                        : "bg-gray-100 text-gray-900 hover:bg-gray-400"
                     }`}
                   >
                     Register

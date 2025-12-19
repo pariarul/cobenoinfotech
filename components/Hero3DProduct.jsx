@@ -37,7 +37,7 @@ function LaptopModel() {
         ctx.font = "bold 40px Arial";
         ctx.fillText("COBENO", 40, 80);
         ctx.font = "20px Arial";
-        ctx.fillText("Tech Solutions", 40, 115);
+        ctx.fillText("Infotech Solutions", 40, 115);
         // Code lines
         ctx.fillStyle = "rgba(255,255,255,0.2)";
         ctx.fillRect(40, 160, 300, 10);

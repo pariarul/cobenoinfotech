@@ -58,7 +58,7 @@ function MobileModel() {
     ctx.font = "bold 50px Arial";
     ctx.fillText("COBENO", 50, 100);
     ctx.font = "25px Arial";
-    ctx.fillText("Tech Solutions", 50, 150);
+    ctx.fillText("Infotech Solutions", 50, 150);
 
     // Code lines
     ctx.fillStyle = "rgba(255,255,255,0.2)";
