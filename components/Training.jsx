@@ -48,7 +48,7 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     tech: "HTML, CSS, JavaScript, React, Node.js, MongoDB, Next.js, Tailwind CSS, Express, Git, GitHub ,etc...",
     duration: "12 Weeks",
     students: "12+",
-    price: "14500",
+    price: "9999",
     features: [
       "Live Classes",
       "E-commerce Development",
@@ -57,6 +57,20 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
       "Hands-on Projects",
     ],
     popular: true,
+  },
+    {
+    title: "Backend Development",
+    level: "Beginner to Advanced",
+    tech: "Node.js, Express, REST APIs, Authentication, JWT, Databases, Deployment",
+    duration: "4 Weeks",
+    students: "7+",
+    price: "5999",
+    features: [
+      "Live Classes",
+      "Project-Based Learning",
+      "API Basics",
+      "Real-time Examples",
+    ],
   },
   {
     title: "Frontend Development",
@@ -71,20 +85,6 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
       "Portfolio Building",
       "Resume Guidance",
       "Interview Preparation",
-    ],
-  },
-  {
-    title: "Backend Development",
-    level: "Beginner to Advanced",
-    tech: "Node.js, Express, REST APIs, Authentication, JWT, Databases, Deployment",
-    duration: "4 Weeks",
-    students: "7+",
-    price: "5999",
-    features: [
-      "Live Classes",
-      "Project-Based Learning",
-      "API Basics",
-      "Real-time Examples",
     ],
   },
   {
@@ -119,114 +119,96 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
 
 export default function Training() {
   return (
-    <section id="training" className="bg-gradient-to-b from-white to-gray-50 py-16 lg:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<section id="training" className="relative py-24 bg-gradient-to-b from-white to-gray-50">
+  <div className="mx-auto max-w-5xl px-6">
 
-        {/* Header */}
-        <div className="mb-16 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-indigo-600">
-            Training Courses
-          </p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-            Practical Job-Oriented Training
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-            Build your tech career with real-time projects and expert mentorship.
-          </p>
-        </div>
+    {/* Header */}
+    <div className="text-center mb-20">
+      <p className="text-sm font-semibold uppercase tracking-wide text-purple-700 mb-2">
+        Training Courses
+      </p>
+      <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+        Practical Job-Oriented Training
+      </h2>
+      <p className="mt-4 max-w-2xl mx-auto text-gray-600">
+        Build your tech career with real-time projects and expert mentorship.
+      </p>
+    </div>
 
-        {/* Cards */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {courses.map((course, index) => (
-            <div
-              key={index}
-              className={`relative rounded-3xl p-[1.5px] ${
-                course.popular
-                  ? "bg-gradient-to-r from-indigo-600 to-purple-600"
-                  : "bg-gray-200"
-              }`}
-            >
-              <div className="flex h-full flex-col rounded-3xl bg-white/90 backdrop-blur p-8 shadow-sm">
+    {/* Timeline */}
+    <div className="relative  ">
+      {courses.map((course, index) => (
+        <div key={index} className="mb-16 ml-8 relative">
 
-                {course.popular && (
-                  <span className="absolute -top-3 right-6 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-1 text-xs font-bold text-white shadow-lg">
-                    MOST POPULAR
-                  </span>
-                )}
+          {/* Course Card */}
+          <div className={`p-6 rounded-xl shadow-lg bg-white/90 backdrop-blur-md transition-transform duration-300 hover:scale-105`}>
+            {course.popular && (
+              <span className="inline-block mb-2 px-3 py-1 text-xs font-bold text-white rounded-full bg-blue-800">
+                MOST POPULAR
+              </span>
+            )}
+            <h3 className="text-xl font-bold text-gray-900 mb-2">{course.title}</h3>
 
-                <span className="mb-3 inline-flex w-fit items-center gap-2 rounded-full bg-indigo-600/10 px-3 py-1 text-xs font-semibold text-indigo-600">
-                  <Code2 size={14} />
-                  {course.level}
-                </span>
-
-                <h3 className="mb-2 text-xl font-bold text-gray-900">
-                  {course.title}
-                </h3>
-
-                {/* 🔹 TECH ICON CHIPS */}
-                <div className="mb-5 flex flex-wrap gap-2">
-                  {techIcons
-                    .filter(t => course.tech.includes(t.key))
-                    .map((t, i) => (
-                      <span
-                        key={i}
-                        className="rounded-lg border border-gray-200 bg-gray-50 px-2 py-1 text-xs font-medium text-gray-700"
-                      >
-                        {t.label}
-                      </span>
-                    ))}
-                </div>
-
-                <div className="mb-6 flex gap-6 text-sm text-gray-600">
-                  <div className="flex items-center gap-2">
-                    <Clock size={16} className="text-indigo-600" />
-                    {course.duration}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Users size={16} className="text-purple-600" />
-                    {course.students}
-                  </div>
-                </div>
-
-                <ul className="mb-8 space-y-3 flex-grow">
-                  {course.features.map((feature, i) => (
-                    <li key={i} className="flex gap-3 text-sm text-gray-700">
-                      <CheckCircle size={16} className="mt-0.5 text-green-600" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-auto">
-                  <p className="mb-4 text-2xl font-extrabold text-gray-900">
-                    ₹{course.price}
-                    <span className="text-sm font-normal text-gray-500">
-                      {" "}
-                      / course
-                    </span>
-                  </p>
-
-                  <a
-                    href="https://wa.me/919361430865"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`block rounded-xl py-3 text-center font-semibold transition ${
-                      course.popular
-                        ? "bg-blue-800 text-white hover:bg-blue-700"
-                        : "bg-gray-100 text-gray-900 hover:bg-gray-400"
-                    }`}
-                  >
-                    Register
-                  </a>
-                </div>
-
+            {/* Duration & Students */}
+            <div className="flex gap-6 mb-4 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <Clock size={16} className="text-purple-700" />
+                {course.duration}
+              </div>
+              <div className="flex items-center gap-2">
+                <Users size={16} className="text-pink-600" />
+                {course.students}
               </div>
             </div>
-          ))}
-        </div>
 
-        <CTA />
-      </div>
-    </section>
+            {/* Tech Chips */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              {techIcons
+                .filter(t => course.tech.includes(t.key))
+                .map((t, i) => (
+                  <span key={i} className="px-3 py-1 text-xs font-medium bg-purple-200 text-whiete rounded-full">
+                    {t.label}
+                  </span>
+                ))}
+            </div>
+
+            {/* Features */}
+            <ul className="mb-4 space-y-2 text-gray-700 text-sm">
+              {course.features.map((f, i) => (
+                <li key={i} className="flex items-center gap-2">
+                  <CheckCircle size={16} className="text-green-600" />
+                  {f}
+                </li>
+              ))}
+            </ul>
+
+            {/* Price + CTA */}
+            <div className="flex flex-col md:flex-row md:justify-between items-start md:items-center gap-4">
+              <p className="text-2xl font-extrabold text-blue-800">
+                ₹{course.price} <span className="text-sm font-normal text-gray-800">/ course</span>
+              </p>
+              <a
+                href="https://wa.me/919361430865"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`px-6 py-3 font-semibold rounded-xl transition ${
+                  course.popular
+                    ? "bg-blue-800 text-white hover:opacity-90"
+                    : "bg-gray-100 text-gray-900 hover:bg-blue-800 hover:text-white"
+                }`}
+              >
+                Register
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <CTA />
+  </div>
+</section>
+
+
   );
 }
