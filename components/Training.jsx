@@ -39,13 +39,15 @@ const techIcons = [
   { key: "REST APIs", label: "REST APIs"},
   { key: "Databases", label: "Databases"},
   { key: "JavaScript", label: "JavaScript"},
+  { key: "Java", label: "Java"},
+  { key: "Springboot", label: "Springboot"},
 ];
 
 const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */ 
   {
     title: "Full Stack Development",
     level: "Beginner to Advanced",
-    tech: "HTML, CSS, JavaScript, React, Node.js, MongoDB, Next.js, Tailwind CSS, Express, Git, GitHub ,etc...",
+    tech: "HTML, CSS, JavaScript, React, Node.js, MongoDB, Next.js, Tailwind CSS, Express, Git, GitHub ",
     duration: "12 Weeks",
     students: "12+",
     price: "9999",
@@ -115,6 +117,21 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
       "Real-time Examples",
     ],
   },
+  {
+    title: "Java Development",
+    level: "Beginner to Advanced",
+    tech: "Java, Springboot, Databases, REST APIs,JWT,Security, etc...",
+    duration: "12 Weeks",
+    students: "5+",
+    price: "8999",
+    features: [
+      "Live Classes",
+      "Project-Based Learning",
+      "API Basics",
+      "Real-time Examples",
+      "Hands-on Projects",
+    ],
+  }
 ];
 
 export default function Training() {
