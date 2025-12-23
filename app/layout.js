@@ -15,7 +15,6 @@ export const metadata = {
     "Full Stack Development",
   ],
 
-  generator: "Next.js",
 
   icons: {
     icon: "/cobeno_logo.png",

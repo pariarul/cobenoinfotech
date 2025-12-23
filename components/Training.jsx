@@ -51,6 +51,7 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     duration: "12 Weeks",
     students: "12+",
     price: "9999",
+    originalPrice: "20000",
     features: [
       "Live Classes",
       "E-commerce Development",
@@ -67,6 +68,7 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     duration: "4 Weeks",
     students: "7+",
     price: "5999",
+    originalPrice: "11999",
     features: [
       "Live Classes",
       "Project-Based Learning",
@@ -81,6 +83,7 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     duration: "4 Weeks",
     students: "10+",
     price: "3999",
+    originalPrice: "7999",
     features: [
       "Live Classes",
       "Hands-on Projects",
@@ -96,6 +99,7 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     duration: "4 Weeks",
     students: "5+",
     price: "2999",
+    originalPrice: "5999",
     features: [
       "Live Classes",
       "Project-Based Learning",
@@ -110,6 +114,7 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     duration: "4 Weeks",
     students: "5+",
     price: "2999",
+    originalPrice: "5999",
     features: [
       "Live Classes",
       "Project-Based Learning",
@@ -124,6 +129,7 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     duration: "12 Weeks",
     students: "5+",
     price: "8999",
+    originalPrice: "15000",
     features: [
       "Live Classes",
       "Project-Based Learning",
@@ -202,6 +208,7 @@ export default function Training() {
             {/* Price + CTA */}
             <div className="flex flex-col md:flex-row md:justify-between items-start md:items-center gap-4">
               <p className="text-2xl font-extrabold text-blue-800">
+                {course.originalPrice && <span className="line-through text-gray-500 mr-2">₹{course.originalPrice}</span>}
                 ₹{course.price} <span className="text-sm font-normal text-gray-800">/ course</span>
               </p>
               <a
