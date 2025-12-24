@@ -67,8 +67,8 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     tech: "Node.js, Express, REST APIs, Authentication, JWT, Databases, Deployment",
     duration: "4 Weeks",
     students: "7+",
-    price: "5999",
-    originalPrice: "11999",
+    price: "5500",
+    originalPrice: "11000",
     features: [
       "Live Classes",
       "Project-Based Learning",
@@ -113,8 +113,8 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     tech: "Next.js,components, Routing, Pages, APIs, etc...",
     duration: "4 Weeks",
     students: "5+",
-    price: "6999",
-    originalPrice: "12000",
+    price: "4999",
+    originalPrice: "10000",
     features: [
       "Live Classes",
       "Project-Based Learning",
@@ -128,7 +128,7 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     tech: "Java, Springboot, Databases, REST APIs,JWT,Security, etc...",
     duration: "12 Weeks",
     students: "5+",
-    price: "8999",
+    price: "8500",
     originalPrice: "15000",
     features: [
       "Live Classes",
