@@ -47,7 +47,7 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
   {
     title: "Full Stack Development",
     level: "Beginner to Advanced",
-    tech: "HTML, CSS, JavaScript, React, Node.js, MongoDB, Next.js, Tailwind CSS, Express, Git, GitHub ",
+    tech: "HTML, CSS, JavaScript, React, Node.js, MongoDB,Tailwind CSS, Express, Git, GitHub ",
     duration: "12 Weeks",
     students: "12+",
     price: "9999",
@@ -113,8 +113,8 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     tech: "Next.js,components, Routing, Pages, APIs, etc...",
     duration: "4 Weeks",
     students: "5+",
-    price: "2999",
-    originalPrice: "5999",
+    price: "6999",
+    originalPrice: "12000",
     features: [
       "Live Classes",
       "Project-Based Learning",
