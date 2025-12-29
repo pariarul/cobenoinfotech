@@ -39,8 +39,6 @@ const techIcons = [
   { key: "REST APIs", label: "REST APIs"},
   { key: "Databases", label: "Databases"},
   { key: "JavaScript", label: "JavaScript"},
-  { key: "Java", label: "Java"},
-  { key: "Springboot", label: "Springboot"},
 ];
 
 const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */ 
@@ -50,7 +48,7 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     tech: "HTML, CSS, JavaScript, React, Node.js, MongoDB,Tailwind CSS, Express, Git, GitHub ",
     duration: "12 Weeks",
     students: "12+",
-    price: "9999",
+    price: "9500",
     originalPrice: "20000",
     features: [
       "Live Classes",
@@ -120,22 +118,6 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
       "Project-Based Learning",
       "API Basics",
       "Real-time Examples",
-    ],
-  },
-  {
-    title: "Java Development",
-    level: "Beginner to Advanced",
-    tech: "Java, Springboot, Databases, REST APIs,JWT,Security, etc...",
-    duration: "12 Weeks",
-    students: "5+",
-    price: "8500",
-    originalPrice: "15000",
-    features: [
-      "Live Classes",
-      "Project-Based Learning",
-      "API Basics",
-      "Real-time Examples",
-      "Hands-on Projects",
     ],
   }
 ];
