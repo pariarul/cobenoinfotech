@@ -48,8 +48,8 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     tech: "HTML, CSS, JavaScript, React, Node.js, MongoDB,Tailwind CSS, Express, Git, GitHub ",
     duration: "12 Weeks",
     students: "12+",
-    price: "9500",
-    originalPrice: "20000",
+    price: "14500",
+    originalPrice: "25000",
     features: [
       "Live Classes",
       "E-commerce Development",
@@ -65,8 +65,8 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     tech: "Node.js, Express, REST APIs, Authentication, JWT, Databases, Deployment",
     duration: "4 Weeks",
     students: "7+",
-    price: "5500",
-    originalPrice: "11000",
+    price: "7500",
+    originalPrice: "14000",
     features: [
       "Live Classes",
       "Project-Based Learning",
@@ -80,8 +80,8 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     tech: "HTML, CSS, JavaScript, Tailwind CSS, Material UI, UI/UX Basics",
     duration: "4 Weeks",
     students: "10+",
-    price: "3999",
-    originalPrice: "7999",
+    price: "5999",
+    originalPrice: "9999",
     features: [
       "Live Classes",
       "Hands-on Projects",
@@ -96,8 +96,8 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     tech: "React, Hooks, Redux, Axios, npm, json, etc...",
     duration: "4 Weeks",
     students: "5+",
-    price: "2999",
-    originalPrice: "5999",
+    price: "4000",
+    originalPrice: "8000",
     features: [
       "Live Classes",
       "Project-Based Learning",
@@ -111,7 +111,7 @@ const courses = [ /* ⬅️ SAME DATA AS YOUR CODE (UNCHANGED) */
     tech: "Next.js,components, Routing, Pages, APIs, etc...",
     duration: "4 Weeks",
     students: "5+",
-    price: "4999",
+    price: "5999",
     originalPrice: "10000",
     features: [
       "Live Classes",
