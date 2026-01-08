@@ -4,7 +4,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Scale, Users, Copyright, CreditCard, AlertTriangle, HelpCircle } from "lucide-react";
+import { Scale, Users, Copyright, CreditCard, TriangleAlert, CircleHelp } from "lucide-react";
 
 export default function TermsAndConditions() {
     const fadeInUp = {
@@ -98,7 +98,7 @@ export default function TermsAndConditions() {
 
                             <div className="mb-12">
                                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                    <AlertTriangle className="w-6 h-6 text-purple-600" />
+                                    <TriangleAlert className="w-6 h-6 text-purple-600" />
                                     5. Limitation of Liability
                                 </h2>
                                 <p>
@@ -108,7 +108,7 @@ export default function TermsAndConditions() {
 
                             <div className="mb-12">
                                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                    <HelpCircle className="w-6 h-6 text-purple-600" />
+                                    <CircleHelp className="w-6 h-6 text-purple-600" />
                                     6. Contact Information
                                 </h2>
                                 <p>
