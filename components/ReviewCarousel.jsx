@@ -5,16 +5,17 @@ import { Star } from "lucide-react";
 const reviews = [
   {
     name: "Dhana",
-    text: "Cobenoinfotech training was amazing. Trainers explained every concept clearly and supported throughout. I got placed successfully.",
+    text: "CobenoInfotech developed my website exactly as I expected. The design is professional, performance is excellent, and the delivery was on time. Highly recommended."
   },
   {
     name: "Govindan",
-    text: "The custom website development services were top-notch. Excellent design, smooth workflow, and timely delivery.",
+    text: "The website developed by CobenoInfotech is top-notch. Clean design, smooth functionality, and very responsive across all devices."
   },
   {
     name: "Naveen",
-    text: "Great experience working with the team. They understood requirements and delivered beyond expectations.",
+    text: "Amazing website development experience. They clearly understood my requirements and delivered a modern, high-quality website beyond expectations."
   },
+
 ];
 
 export default function AllReviews() {

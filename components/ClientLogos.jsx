@@ -6,7 +6,8 @@ const clientLogos = [
   "/people_pulse_full_logo.png",
   "/Panel_Focus-removebg-preview.png",
   "/WhatNext-Logo.png",
-  "/logo.png"
+  "/logo.png",
+  "/zozi.png"
 ];
 
 export default function ClientLogos() {
