@@ -120,11 +120,11 @@ export default function Training() {
   return (
     <section
       id="training"
-      className="relative py-20 sm:py-28 bg-[radial-gradient(circle_at_top,#f5f3ff,white_55%)] overflow-hidden"
+      className="relative py-20 sm:py-28 overflow-hidden"
     >
       {/* Decorative Blobs */}
-      <div className="absolute -top-40 -left-40 w-80 sm:w-[32rem] h-80 sm:h-[32rem] bg-purple-400/30 rounded-full blur-[120px]" />
-      <div className="absolute top-1/3 right-[-10rem] w-72 sm:w-[30rem] h-72 sm:h-[30rem] bg-blue-400/30 rounded-full blur-[120px]" />
+      <div className="absolute -top-40 -left-40 w-80 sm:w-[32rem] h-80 sm:h-[32rem] bg-purple-30 rounded-full blur-[120px]" />
+      <div className="absolute top-1/3 right-[-10rem] w-72 sm:w-[30rem] h-72 sm:h-[30rem] bg-blue-30 rounded-full blur-[120px]" />
 
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6">
         {/* Header */}
