@@ -1,39 +1,9 @@
 "use client";
 
-import { CheckCircle, Clock, Users } from "lucide-react";
+import { CheckCircle, Clock, Users,Star  } from "lucide-react";
 import CTA from "./CTA";
+import { motion } from "framer-motion";
 
-/* 🔹 Tech keyword → Icon mapping (DESIGN ONLY) */
-const techIcons = [
-  { key: "HTML", label: "HTML" },
-  { key: "CSS", label: "CSS" },
-  { key: "JavaScript", label: "JS" },
-  { key: "React", label: "React" },
-  { key: "Next", label: "Next.js" },
-  { key: "Node", label: "Node" },
-  { key: "Mongo", label: "MongoDB" },
-  { key: "Tailwind", label: "Tailwind" },
-  { key: "Express", label: "Express" },
-  { key: "Git", label: "Git" },
-  { key: "GitHub", label: "GitHub" },
-  { key: "Redux", label: "Redux" },
-  { key: "Material", label: "Material UI" },
-  { key: "UI/UX", label: "UI/UX" },
-  { key: "Components", label: "Components" },
-  { key: "Pages", label: "Pages" },
-  { key: "Routing", label: "Routing" },
-  { key: "API", label: "API" },
-  { key: "Authentication", label: "Authentication" },
-  { key: "Deployment", label: "Deployment" },
-  { key: "Testing", label: "Testing" },
-  { key: "Hooks", label: "Hooks" },
-  { key: "json", label: "json" },
-  { key: "npm", label: "npm" },
-  { key: "Axios", label: "Axios" },
-  { key: "JWT", label: "JWT" },
-  { key: "REST APIs", label: "REST APIs" },
-  { key: "Databases", label: "Databases" },
-];
 
 const courses = [
   {
@@ -44,6 +14,8 @@ const courses = [
     students: "12+",
     price: "19000",
     originalPrice: "40000",
+    rating: 4.7,
+    reviews: "800+",
     features: [
       "Live Classes",
       "E-commerce Development",
@@ -61,6 +33,8 @@ const courses = [
     students: "7+",
     price: "9000",
     originalPrice: "20000",
+      rating: 4.7,
+    reviews: "800+",
     features: [
       "Live Classes",
       "Project-Based Learning",
@@ -76,6 +50,8 @@ const courses = [
     students: "10+",
     price: "7000",
     originalPrice: "12000",
+      rating: 4.7,
+    reviews: "800+",
     features: [
       "Live Classes",
       "Hands-on Projects",
@@ -92,6 +68,8 @@ const courses = [
     students: "5+",
     price: "4000",
     originalPrice: "8000",
+      rating: 4.7,
+    reviews: "800+",
     features: [
       "Live Classes",
       "Project-Based Learning",
@@ -107,6 +85,8 @@ const courses = [
     students: "5+",
     price: "5999",
     originalPrice: "10000",
+      rating: 4.7,
+    reviews: "800+",
     features: [
       "Live Classes",
       "Project-Based Learning",
@@ -118,124 +98,139 @@ const courses = [
 
 export default function Training() {
   return (
-    <section
+ <section
       id="training"
-      className="relative py-20 sm:py-28 overflow-hidden"
+      className="relative py-24 sm:py-32 overflow-hidden"
     >
-      {/* Decorative Blobs */}
-      <div className="absolute -top-40 -left-40 w-80 sm:w-[32rem] h-80 sm:h-[32rem] bg-purple-30 rounded-full blur-[120px]" />
-      <div className="absolute top-1/3 right-[-10rem] w-72 sm:w-[30rem] h-72 sm:h-[30rem] bg-blue-30 rounded-full blur-[120px]" />
+      {/* Background blobs */}
+      <div className="absolute -top-32 left-1/4 w-[30rem] h-[30rem] bg-purple-30 blur-[140px] rounded-full" />
+      <div className="absolute bottom-0 right-1/4 w-[26rem] h-[26rem] bg-blue-30 blur-[140px] rounded-full" />
 
-      <div className="relative mx-auto max-w-5xl px-4 sm:px-6">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-16 sm:mb-28">
-          <span className="inline-block px-4 sm:px-6 py-2 mb-4 text-xs font-bold tracking-widest text-purple-700 rounded-full bg-white/70 backdrop-blur shadow">
-            TRAINING COURSES
+        <div className="text-center mb-20">
+          <span className="inline-block px-6 py-2 mb-4 text-xs font-bold tracking-widest text-purple-700 rounded-full bg-white/70 backdrop-blur shadow">
+            CAREER TRAINING
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900">
-            Practical Job-Oriented Training
+
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900">
+            Learn Skills That Companies Hire For
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-gray-600 text-base sm:text-lg">
-            Build your tech career with real-time projects and expert mentorship.
+
+          <p className="mt-4 max-w-2xl mx-auto text-gray-600 text-lg">
+            Industry-ready courses with mentorship, projects & placement support.
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Hide line on very small screens */}
-          <div className="hidden sm:block absolute left-6 top-0 h-full w-[3px] bg-gradient-to-b from-purple-500 via-blue-500 to-purple-500 opacity-70" />
+        {/* Courses */}
+        <div className="space-y-20">
+          {courses.map((course, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: index * 0.1 }}
+              className="group grid lg:grid-cols-3 gap-8 lg:gap-10 items-stretch will-change-transform"
+            >
+              {/* Left Card */}
+              <div className="lg:col-span-2 rounded-2xl sm:rounded-[28px] bg-white/80 backdrop-blur-xl p-6 sm:p-10 border border-white/40 shadow-lg transition group-hover:-translate-y-1">
+                {course.popular && (
+                  <span className="inline-block mb-4 px-4 py-1 text-xs font-bold text-white rounded-full bg-gradient-to-r from-purple-600 to-blue-600">
+                    MOST POPULAR
+                  </span>
+                )}
 
-          <div className="space-y-16 sm:space-y-28">
-            {courses.map((course, index) => (
-              <div key={index} className="relative sm:pl-16 group">
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3">
+                  {course.title}
+                </h3>
 
-                {/* Timeline Dot (hidden on mobile) */}
-                <div className="hidden sm:block absolute left-[6px] top-10">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 p-[4px] shadow-xl">
-                    <div className="w-full h-full bg-white rounded-full" />
+                <p className="text-gray-600 mb-6">
+                  {course.description}
+                </p>
+
+                {/* Meta */}
+                <div className="flex flex-wrap gap-6 text-sm text-gray-600 mb-6">
+                  <div className="flex items-center gap-2">
+                    <Clock size={14} className="text-purple-600" />
+                    {course.duration}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Users size={14} className="text-blue-600" />
+                    {course.students}
                   </div>
                 </div>
 
-                {/* Card */}
-                <div className="relative rounded-2xl sm:rounded-[28px] bg-white/80 backdrop-blur-xl p-6 sm:p-8 border border-white/40 shadow-lg sm:shadow-[0_25px_60px_-20px_rgba(0,0,0,0.2)] transition-all duration-500 sm:group-hover:-translate-y-3">
-
-                  {course.popular && (
-                    <span className="absolute -top-3 right-4 sm:right-6 px-3 sm:px-4 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full bg-gradient-to-r from-purple-600 to-blue-600">
-                      MOST POPULAR
-                    </span>
-                  )}
-
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
-                    {course.title}
-                  </h3>
-
-                  {/* Meta */}
-                  <div className="flex flex-wrap gap-4 sm:gap-6 text-sm text-gray-600 mb-5">
-                    <div className="flex items-center gap-2">
-                      <Clock size={14} className="text-purple-600" />
-                      {course.duration}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Users size={14} className="text-blue-600" />
-                      {course.students}
-                    </div>
-                  </div>
-
-                  {/* Tech Chips */}
-                  <div className="flex flex-wrap gap-2 mb-5">
-                    {techIcons
-                      .filter(t => course.tech.includes(t.key))
-                      .map((t, i) => (
-                        <span
-                          key={i}
-                          className="px-3 py-1 text-xs font-semibold rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-gray-800"
-                        >
-                          {t.label}
-                        </span>
-                      ))}
-                  </div>
-
-                  {/* Features */}
-                  <ul className="grid gap-3 sm:grid-cols-2 text-sm text-gray-700 mb-6">
-                    {course.features.map((f, i) => (
-                      <li key={i} className="flex items-center gap-2">
-                        <CheckCircle size={14} className="text-green-600" />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Footer */}
-                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="text-xl sm:text-2xl font-extrabold text-gray-900">
-                      {course.originalPrice && (
-                        <span className="line-through text-gray-400 mr-2">
-                          ₹{course.originalPrice}
-                        </span>
-                      )}
-                      ₹{course.price}
-                    </p>
-
-                    <a
-                      href="https://wa.me/919361430865"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full sm:w-auto text-center rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-3 font-semibold text-white hover:opacity-90"
-                    >
-                      Register Now
-                    </a>
-                  </div>
-                </div>
+                {/* Features */}
+                <ul className="grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
+                  {course.features.map((f, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <CheckCircle size={14} className="text-green-600" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            ))}
-          </div>
+
+              {/* Right Panel */}
+              <div className="rounded-2xl bg-white shadow-xl border border-gray-100 p-6 sm:p-8 flex flex-col justify-between transition group-hover:-translate-y-3">
+                {/* Rating */}
+                <div className="flex items-center gap-2 mb-6">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      size={16}
+                      className={
+                        i < Math.round(course.rating)
+                          ? "text-yellow-400 fill-yellow-400"
+                          : "text-gray-300"
+                      }
+                      fill="currentColor"
+                    />
+                  ))}
+                  <span className="font-bold text-gray-900 ml-2">
+                    {course.rating}
+                  </span>
+                  <span className="text-sm text-gray-500">
+                    ({course.reviews} reviews)
+                  </span>
+                </div>
+
+                {/* Price */}
+                <div className="mb-6">
+                  <p className="text-sm text-gray-400 line-through">
+                    ₹{course.originalPrice}
+                  </p>
+                  <p className="text-3xl font-extrabold text-gray-900">
+                    ₹{course.price}
+                  </p>
+                  <p className="text-xs text-green-600 mt-1">
+                    Limited seats available
+                  </p>
+                </div>
+
+                {/* CTA */}
+                <a
+                  href="https://wa.me/919361430865"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full text-center rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-3 font-semibold text-white hover:opacity-90"
+                >
+                  Enroll Now
+                </a>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
-        <div className="mt-24 sm:mt-32">
+        {/* Bottom CTA */}
+        <div className="mt-28">
           <CTA />
         </div>
       </div>
     </section>
+
+
 
 
   );
