@@ -204,9 +204,6 @@ export default function Training() {
                   <p className="text-3xl font-extrabold text-gray-900">
                     ₹{course.price}
                   </p>
-                  <p className="text-xs text-green-600 mt-1">
-                    Limited seats available
-                  </p>
                 </div>
 
                 {/* CTA */}

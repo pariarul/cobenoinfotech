@@ -14,7 +14,6 @@ export default function Home() {
     <main className="min-h-screen bg-white text-gray-900 selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
       <Hero />
-
       <Services />
       <WhyChooseUs />
       <Training />

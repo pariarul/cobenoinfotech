@@ -51,7 +51,7 @@ const services = [
 ];
 
 export default function Services() {
-  const [showReviews, setShowReviews] = useState(false);
+  const [showReviews, setShowReviews] = useState(true);
 
   return (
     <section id="services" className="py-12 lg:py-20 bg-gray-50 dark:bg-neutral-900">
