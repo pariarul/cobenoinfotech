@@ -64,7 +64,7 @@ const pricingPlans = [
   {
     title: "Basic",
     price: "₹15,000",
-    features: ["Static Website", "Responsive Design", "Basic SEO", "1 Month Support"],
+    features: ["Static Website", "Responsive Design", "Basic SEO", "1 year Support"],
     color: "border-blue-500",
   },
   {

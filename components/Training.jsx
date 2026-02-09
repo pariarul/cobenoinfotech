@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle, Clock, Users,Star  } from "lucide-react";
+import { CheckCircle, Clock, Users, Star } from "lucide-react";
 import CTA from "./CTA";
 import { motion } from "framer-motion";
 
@@ -33,7 +33,7 @@ const courses = [
     students: "7+",
     price: "9000",
     originalPrice: "20000",
-      rating: 4.5,
+    rating: 4.5,
     reviews: "3+",
     features: [
       "Live Classes",
@@ -50,7 +50,7 @@ const courses = [
     students: "10+",
     price: "7000",
     originalPrice: "12000",
-      rating: 4.9,
+    rating: 4.9,
     reviews: "10+",
     features: [
       "Live Classes",
@@ -68,7 +68,7 @@ const courses = [
     students: "5+",
     price: "4000",
     originalPrice: "8000",
-      rating: 4.1,
+    rating: 4.1,
     reviews: "3+",
     features: [
       "Live Classes",
@@ -85,7 +85,7 @@ const courses = [
     students: "5+",
     price: "5999",
     originalPrice: "10000",
-      rating: 4.1,
+    rating: 4.1,
     reviews: "3+",
     features: [
       "Live Classes",
@@ -98,7 +98,7 @@ const courses = [
 
 export default function Training() {
   return (
- <section
+    <section
       id="training"
       className="relative py-24 sm:py-32 overflow-hidden"
     >
