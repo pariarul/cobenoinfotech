@@ -8,9 +8,9 @@ const pricingPlans = [
     title: "Static Website",
     description: "Clean, fast-loading websites for individuals & startups.",
     originalPrice: 12000,
-    page:"20 pages",
+    page: "20 pages",
     hosting: "1 year free hosting",
-    domain: "not included",
+    domain: "Not included",
     discount: 65,
     icon: FileText,
     color: "sky",
@@ -19,10 +19,10 @@ const pricingPlans = [
     title: "Dynamic Website",
     description: "CMS, admin panel & scalable business features.",
     originalPrice: 24000,
-    discount: 65,
-    page:"50 pages",
+    page: "50 pages",
     hosting: "1 year free hosting",
-    domain: "free domain for 1 year",
+    domain: "Free domain for 1 year",
+    discount: 65,
     icon: Globe,
     color: "indigo",
   },
@@ -30,10 +30,10 @@ const pricingPlans = [
     title: "E-commerce Website",
     description: "Online store with products, payments & orders.",
     originalPrice: 42000,
-    page:"50 products",
-    discount: 55,
+    page: "50 products",
     hosting: "1 year free hosting",
-    domain: "free domain for 1 year",
+    domain: "Free domain for 1 year",
+    discount: 55,
     icon: Database,
     color: "emerald",
   },
@@ -60,8 +60,7 @@ export default function PricingSoftDesign() {
           {pricingPlans.map((plan, index) => {
             const Icon = plan.icon;
             const discountedPrice = Math.round(
-              plan.originalPrice -
-                (plan.originalPrice * plan.discount) / 100
+              plan.originalPrice - (plan.originalPrice * plan.discount) / 100
             );
 
             return (
@@ -77,31 +76,31 @@ export default function PricingSoftDesign() {
                 <div
                   className={`
                     flex-shrink-0 w-20 h-20 rounded-2xl flex items-center justify-center
-                    ${
-                      plan.color === "sky" &&
-                      "bg-sky-100 text-sky-600"
-                    }
-                    ${
-                      plan.color === "indigo" &&
-                      "bg-indigo-100 text-indigo-600"
-                    }
-                    ${
-                      plan.color === "emerald" &&
-                      "bg-emerald-100 text-emerald-600"
-                    }
+                    ${plan.color === "sky" && "bg-sky-100 text-sky-600"}
+                    ${plan.color === "indigo" && "bg-indigo-100 text-indigo-600"}
+                    ${plan.color === "emerald" && "bg-emerald-100 text-emerald-600"}
                   `}
                 >
                   <Icon className="w-9 h-9" />
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {plan.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm max-w-xl">
-                    {plan.description}
-                  </p>
+                <div className="flex-1 text-center md:text-left space-y-2">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.title}</h3>
+                  <p className="text-gray-600 text-sm max-w-xl">{plan.description}</p>
+
+                  {/* Pages / Hosting / Domain */}
+                  <div className="mt-3 space-y-1 text-gray-700 text-sm">
+                    <p>
+                      <span className="font-semibold">Pages / Products:</span> {plan.page}
+                    </p>
+                    <p>
+                      <span className="font-semibold">Hosting:</span> {plan.hosting}
+                    </p>
+                    <p>
+                      <span className="font-semibold">Domain:</span> {plan.domain}
+                    </p>
+                  </div>
                 </div>
 
                 {/* Price Bubble */}
