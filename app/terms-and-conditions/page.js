@@ -17,7 +17,7 @@ export default function TermsAndConditions() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
+            <section className="relative pt-32 pb-20 bg-blue-900  text-white overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
                 <div className="container mx-auto px-6 relative z-10 text-center">
                     <motion.div
@@ -116,7 +116,7 @@ export default function TermsAndConditions() {
                                 </p>
                                 <div className="mt-4 p-6 bg-purple-50 rounded-xl border border-purple-100">
                                     <p className="font-bold text-lg text-purple-900">Cobenoinfotech</p>
-                                    <p className="text-purple-800">Email: legal@cobenoinfotech.com</p>
+                                    <p className="text-purple-800">Email: info@cobenoinfotech.com</p>
                                 </div>
                             </div>
 

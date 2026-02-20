@@ -7,6 +7,9 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import WhatWeDo from "@/components/WhatWeDo";
+import WhoWeServe from "@/components/WhoWeServe";
+import ClientLogos from "@/components/ClientLogos";
 
 
 export default function Home() {
@@ -14,8 +17,11 @@ export default function Home() {
     <main className="min-h-screen bg-white text-gray-900 selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
       <Hero />
+      <WhatWeDo />
       <Services />
       <WhyChooseUs />
+      <WhoWeServe />
+      <ClientLogos />
       <Training />
       <Testimonials />
       <FAQ />

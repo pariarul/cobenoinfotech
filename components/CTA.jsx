@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 export default function CTA() {
   return (
-    <div className="mt-20 rounded-3xl bg-blue-800 px-6 py-8 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-white">
+    <div className="mt-20 rounded-3xl bg-blue-700 px-6 py-8 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-white">
       
       {/* TEXT */}
       <div className="text-center md:text-left">

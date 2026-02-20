@@ -1,7 +1,6 @@
 "use client";
 
 import { Globe, Layout, Database, ShoppingCart, MessageCircle, Store, ArrowRight } from "lucide-react";
-import ServicesAndReviews from "./ServicesAndReviews"; // import your component
 import { useState } from "react";
 import Link from "next/link";
 
@@ -35,15 +34,15 @@ const services = [
     bg: "bg-yellow-50 dark:bg-yellow-900/20",
   },
   {
-    title: "Live Chat Project",
-    description: "Mobile apps for iOS and Android.",
+    title: "product catalog development",
+    description: "Custom product catalogs for your business.",
     icon: MessageCircle,
     color: "text-pink-500",
     bg: "bg-pink-50 dark:bg-pink-900/20",
   },
   {
-    title: "Matrimonial Websites",
-    description: "Matrimonial websites built with modern technologies.",
+    title: "CRM Development",
+    description: "Custom CRM solutions for businesses.",
     icon: Store,
     color: "text-orange-500",
     bg: "bg-orange-50 dark:bg-orange-900/20",
@@ -83,16 +82,6 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <button
-            onClick={() => setShowReviews((prev) => !prev)} // toggle state
-            className="inline-block border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold py-3 px-8 rounded-full transition-colors"
-          >
-            {showReviews ? "Hide Services" : "View All Services"} {/* dynamic text */}
-          </button>
-        </div>
-
-        {showReviews && <ServicesAndReviews />}
       </div>
     </section>
   );

@@ -128,7 +128,7 @@ export default function Footer() {
     {/* Location */}
     <li className="flex items-center gap-3">
       <MapPin size={16} style={{ color: BLUE }} />
-      <span>Tamil Nadu, India</span>
+      <span>coimbatore, Tamil Nadu, India</span>
     </li>
 
   </ul>
@@ -186,7 +186,7 @@ export default function Footer() {
       </a>
       <span className="text-gray-400">|</span>
       <a
-        href="/terms-conditions"
+        href="/terms-and-conditions"
         className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition underline-offset-4 "
       >
         Terms & Conditions
