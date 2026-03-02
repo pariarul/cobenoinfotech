@@ -1,8 +1,73 @@
 "use client";
 
-import { CheckCircle, Clock, Code, Database, Layout, Atom } from "lucide-react";
 import { motion } from "framer-motion";
 import CTA from "./CTA";
+
+import {
+  // Course icons
+  Code,
+  Database,
+  Layout,
+  Atom,
+
+  // Tech icons
+  FileCode,
+  Server,
+  ShieldCheck,
+  Cpu,
+  Flame,
+  GitBranch,
+  Github,
+  Send,
+  Box,
+  Globe,
+  Clock,
+  CheckCircle,
+  Sparkles,
+} from "lucide-react";
+
+/* =======================
+   TECH ICON MAP
+======================= */
+export const techIcons = {
+  // Core Web
+  HTML: FileCode,
+  CSS: FileCode,
+  JavaScript: FileCode,
+
+  // Frontend
+  React: Atom,
+  Hooks: Atom,
+  Tailwind: Layout,
+  "UI/UX": Layout,
+  State: Cpu,
+
+  // Backend
+  "Node.js": Server,
+  Express: Server,
+  MongoDB: Database,
+  "REST API": Cpu,
+  JWT: ShieldCheck,
+
+  // Tools
+  Axios: Send,
+  Git: GitBranch,
+  GitHub: Github,
+  Postman: Send,
+  Docker: Box,
+
+  // Cloud / Deployment
+  Firebase: Flame,
+  Deployment: Globe,
+
+
+  // Frameworks
+    "Next.js": Layout,
+  "App Router": Cpu,
+  "Server Components": Server,
+  "API Routes": Server,
+  SEO: Globe,
+};
 
 /* =======================
    COURSE DATA
@@ -11,53 +76,128 @@ const courses = [
   {
     title: "Full Stack Development",
     duration: "8 Weeks",
-    tech: ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB"],
     icon: Code,
+    popular: true,
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Firebase",
+      "Git",
+      "GitHub",
+      "Postman",
+      "Deployment",
+    ],
     features: [
       "Live Classes",
-      "E-commerce Development",
-      "Live Chat Project",
-      "Freelance Support",
-      "Hands-on Projects",
+      "E-commerce Full Project",
+      "Authentication (JWT + Firebase)",
+      "Admin Dashboard",
+      "REST API Development",
+      "Payment Gateway Basics",
+      "Git & GitHub Workflow",
+      "API Testing with Postman",
+      "Deployment (Vercel / Render)",
+      "Freelancing & Career Support",
     ],
-    popular: true,
   },
   {
     title: "Backend Development",
     duration: "4 Weeks",
-    tech: ["Node.js", "Express", "REST API", "JWT", "MongoDB"],
     icon: Database,
+    tech: [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "REST API",
+      "Postman",
+      "Git",
+      "GitHub",
+      "Docker",
+    ],
     features: [
-      "Live Classes",
-      "Project-Based Learning",
-      "API Development",
-      "Authentication & Security",
+      "API Architecture Design",
+      "JWT Authentication & Authorization",
+      "Role-Based Access Control",
+      "Secure Password Handling",
+      "API Testing with Postman",
+      "Error Handling & Logging",
+      "Production Deployment",
+      "Basic Docker Setup",
     ],
   },
   {
     title: "Frontend Development",
     duration: "4 Weeks",
-    tech: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "UI/UX"],
     icon: Layout,
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind",
+      "UI/UX",
+      "Git",
+      "GitHub",
+      "Firebase",
+    ],
     features: [
-      "Live Classes",
-      "Hands-on Projects",
-      "Portfolio Building",
+      "Responsive & Mobile-First Design",
+      "Modern UI/UX Practices",
+      "Component-Based Design",
+      "Firebase Authentication",
+      "Form Validation",
+      "Portfolio Projects",
+      "GitHub Portfolio Setup",
       "Interview Preparation",
     ],
   },
   {
     title: "React Development",
     duration: "2 Weeks",
-    tech: ["React", "Hooks", "Axios", "State Management"],
     icon: Atom,
+    tech: ["React", "Hooks", "Axios", "State", "Firebase", "Git", "GitHub"],
     features: [
-      "Live Classes",
-      "Component-Based Projects",
-      "API Integration",
-      "Real-time Examples",
+      "React Component Architecture",
+      "State Management Basics",
+      "API Integration with Axios",
+      "Authentication with Firebase",
+      "Reusable Components",
+      "Performance Optimization",
+      "Real-World Projects",
     ],
   },
+  {
+  title: "Next.js Development",
+  duration: "3 Weeks",
+  icon: Layout, // or Code if you prefer
+  tech: [
+    "Next.js",
+    "React",
+    "App Router",
+    "Server Components",
+    "API Routes",
+    "SEO",
+    "Firebase",
+    "Git",
+    "GitHub",
+    "Deployment",
+  ],
+  features: [
+    "Next.js App Router Architecture",
+    "Server & Client Components",
+    "Dynamic Routing & Layouts",
+    "API Routes & Backend Integration",
+    "SEO & Performance Optimization",
+    "Authentication (Firebase / JWT)",
+    "Environment Variables & Config",
+    "Production Deployment (Vercel)",
+    "Real-World Next.js Project",
+  ],
+}
 ];
 
 /* =======================
@@ -65,78 +205,59 @@ const courses = [
 ======================= */
 export default function Training() {
   return (
-    <section id="training" className="relative py-24 sm:py-32 overflow-hidden">
-      
-      {/* Background Effects */}
-      <div className="absolute -top-32 left-1/4 w-[30rem] h-[30rem]  rounded-full" />
-      <div className="absolute bottom-0 right-1/4 w-[26rem] h-[26rem] bg-blue-300/30 blur-[140px] rounded-full" />
+    <section className="py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-16">
+         
+          <h2 className="text-blue-600 dark:text-blue-400 font-semibold uppercase tracking-wide text-sm mb-2"> 
+            Career Training
+          </h2>  
+         
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-
-        {/* Header */}
-        <div className="text-center mb-20">
-
-            <h2 className="text-blue-600 dark:text-blue-400 font-semibold uppercase tracking-wide text-sm mb-2">
-           CAREER TRAINING
+          <h2 className="mt-6 text-3xl sm:text-4xl font-extrabold">
+            Skills That Get You Hired
           </h2>
-
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Learn Skills That Companies Hire For
-          </h3>
-
-
-          <p className="mt-4 max-w-2xl mx-auto text-gray-600 text-lg">
-            Industry-ready courses with mentorship, real projects & career support.
-          </p>
         </div>
 
-        {/* Courses */}
-        <div className="space-y-20">
+        <div className="grid gap-10">
           {courses.map((course, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: index * 0.1 }}
-              className="rounded-2xl sm:rounded-[28px] bg-white/80 backdrop-blur-xl p-6 sm:p-10 border border-white/40 shadow-lg"
+              transition={{ duration: 0.4 }}
+              className="rounded-2xl bg-white p-8 border shadow-sm"
             >
-              {course.popular && (
-                <span className="inline-block mb-4 px-4 py-1 text-xs font-bold text-white rounded-full bg-gradient-to-r from-purple-600 to-blue-600">
-                  MOST POPULAR
-                </span>
-              )}
-
-              {/* Title */}
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-4 mb-4">
                 <course.icon className="text-purple-600" size={28} />
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-                  {course.title}
-                </h3>
-              </div>
-
-              {/* Meta */}
-              <div className="flex items-center gap-6 text-sm text-gray-600 mb-6">
-                <div className="flex items-center gap-2">
-                  <Clock size={14} className="text-purple-600" />
-                  {course.duration}
+                <div>
+                  <h3 className="text-2xl font-bold">{course.title}</h3>
+                  <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <Clock size={14} />
+                    {course.duration}
+                  </div>
                 </div>
               </div>
 
-              {/* Tech Stack */}
+              {/* Tech */}
               <div className="flex flex-wrap gap-2 mb-6">
-                {course.tech.map((t, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-700"
-                  >
-                    {t}
-                  </span>
-                ))}
+                {course.tech.map((tech, i) => {
+                  const Icon = techIcons[tech];
+                  return (
+                    <span
+                      key={i}
+                      className="flex items-center gap-2 px-3 py-1 text-xs rounded-full bg-gray-100"
+                    >
+                      {Icon && <Icon size={14} />}
+                      {tech}
+                    </span>
+                  );
+                })}
               </div>
 
               {/* Features */}
-              <ul className="grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
+              <ul className="grid sm:grid-cols-2 gap-3 text-sm">
                 {course.features.map((f, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <CheckCircle size={14} className="text-green-600" />
@@ -148,8 +269,7 @@ export default function Training() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-28">
+        <div className="mt-24">
           <CTA />
         </div>
       </div>
