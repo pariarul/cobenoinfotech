@@ -55,8 +55,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm text-blue-800/80 max-w-xs leading-relaxed">
-              Empowering businesses and individuals through modern technology
-              solutions and job-oriented IT training.
+              Empowering businesses through modern technology solutions and innovative software development.
             </p>
 
 <div className="flex gap-3 mt-6">
@@ -82,7 +81,7 @@ export default function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-3 text-sm">
-              {[ "Home" ,"Services", "Training", "About Us", "Contact"].map((item) => (
+              {[ "Home" ,"Services", "About Us", "Contact"].map((item) => (
                 <li key={item}>
                   <Link
                     href={`#${item.toLowerCase().replace(" ", "")}`}

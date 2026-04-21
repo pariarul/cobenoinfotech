@@ -1,6 +1,6 @@
 "use client";
 
-import { Globe, Layout, Database, ShoppingCart, MessageCircle, Store, ArrowRight } from "lucide-react";
+import { Globe, Layout, Database, ShoppingCart, MessageCircle, Store, ArrowRight, Smartphone, Palette, Cloud, Waypoints, Search } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -47,6 +47,41 @@ const services = [
     color: "text-orange-500",
     bg: "bg-orange-50 dark:bg-orange-900/20",
   },
+  {
+    title: "Mobile App Development",
+    description: "Native and cross-platform apps (Android & iOS).",
+    icon: Smartphone,
+    color: "text-red-500",
+    bg: "bg-red-50 dark:bg-red-900/20",
+  },
+  {
+    title: "UI/UX Strategy & Design",
+    description: "User-centric design and intuitive prototyping.",
+    icon: Palette,
+    color: "text-cyan-500",
+    bg: "bg-cyan-50 dark:bg-cyan-900/20",
+  },
+  {
+    title: "Cloud infrastructure",
+    description: "Scalable cloud solutions and DevOps automation.",
+    icon: Cloud,
+    color: "text-indigo-500",
+    bg: "bg-indigo-50 dark:bg-indigo-900/20",
+  },
+  {
+    title: "API & Microservices",
+    description: "Secure, reliable, and scalable backend architectures.",
+    icon: Waypoints,
+    color: "text-teal-500",
+    bg: "bg-teal-50 dark:bg-teal-900/20",
+  },
+  {
+    title: "SEO & Digital Strategy",
+    description: "Boost visibility and drive organic traffic.",
+    icon: Search,
+    color: "text-rose-500",
+    bg: "bg-rose-50 dark:bg-rose-900/20",
+  },
 ];
 
 export default function Services() {
@@ -60,7 +95,7 @@ export default function Services() {
             Featured Services
           </h2>
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-            Website Development Services
+            Comprehensive Web & App Solutions
           </h3>
         </div>
 

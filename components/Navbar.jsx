@@ -12,8 +12,9 @@ import {
   Home,
   Info,
   Briefcase,
-  GraduationCap,
   PhoneCall,
+  Settings2,
+  Laptop,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
@@ -22,8 +23,9 @@ import clsx from "clsx";
 const navLinks = [
   { name: "Home", href: "/", icon: Home },
   { name: "About Us", href: "#about", icon: Info },
+  { name: "How We Work", href: "#process", icon: Settings2 },
+  { name: "Projects", href: "#projects", icon: Laptop },
   { name: "Services", href: "#services", icon: Briefcase },
-  { name: "Training", href: "#training", icon: GraduationCap },
   { name: "Contact", href: "#contact", icon: PhoneCall },
 ];
 
@@ -73,6 +75,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
+              suppressHydrationWarning
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-800 text-white dark:bg-white dark:text-blue-700 transition active:scale-95"
             >
               <motion.div
@@ -122,6 +125,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
+              suppressHydrationWarning
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-800 text-white dark:bg-white dark:text-blue-700 transition active:scale-95"
             >
               <motion.div

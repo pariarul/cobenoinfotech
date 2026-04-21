@@ -9,8 +9,7 @@ import dynamic from "next/dynamic";
 const Hero3DProduct = dynamic(() => import("@/components/Hero3DProduct"), { ssr: false });
 
 const stats = [
-  { label: "Projects Done", value: "15+", icon: Trophy },
-  { label: "Students Trained", value: "12+", icon: Users },
+  { label: "Projects Done", value: "25+", icon: Trophy },
   { label: "Expert Team", value: "5+", icon: Award },
 ];
 
@@ -57,7 +56,6 @@ export default function Hero() {
             </div>
             <div className="relative px-4 py-1 sm:px-5 sm:py-2 rounded-xl shadow-md bg-yellow-500 text-blue-900">
               <p className="text-xs sm:text-sm font-bold leading-tight">Top-Rated Tech Agency</p>
-              <p className="text-[9px] sm:text-xs font-semibold opacity-80">& Institute</p>
             </div>
           </div>
 
@@ -73,9 +71,8 @@ export default function Hero() {
 
           {/* DESCRIPTION */}
           <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-600 max-w-xs sm:max-w-md mx-auto lg:mx-0 leading-relaxed">
-            Cobenoinfotech specializes in modern <span className="font-semibold text-blue-900">web development, software solutions,</span>
-            and industry-ready <span className="font-semibold text-blue-900">IT training programs.</span> 
-            We help companies grow and individuals build successful tech careers.
+            Cobenoinfotech specializes in modern <span className="font-semibold text-blue-900">web development and mobile app solutions.</span>
+            We help companies grow by building innovative digital products across all platforms.
           </p>
 
           {/* BUTTONS */}
@@ -87,13 +84,6 @@ export default function Hero() {
             >
               Get a Quote <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-
-            <Link
-              href="#training"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold border-2 border-blue-600 text-blue-900 hover:bg-blue-50 active:scale-95 transition-all"
-            >
-              Explore Training
-            </Link>
           </div>
 
           {/* TRUST METRICS (scrollable on mobile) */}
