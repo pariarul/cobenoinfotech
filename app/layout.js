@@ -3,20 +3,44 @@ import BottomNav from "@/components/BottomNav";
 import WhatsAppChat from "@/components/WhatsAppChat";
 
 export const metadata = {
-  title: "Cobenoinfotech | Premium Web & App Development Services",
+  title: "Cobenoinfotech | Leading Web & Mobile App Development Agency in India",
   description:
-    "Empowering businesses through cutting-edge technology & modern software solutions. Specializing in Web Development, Mobile Apps, and Cloud Infrastructure.",
+    "Cobenoinfotech provides premium web development, mobile app solutions, and custom software engineering. Specializing in SaaS, E-commerce, and Fintech apps in Perambalur, Coimbatore, and across India.",
 
   keywords: [
     "Cobenoinfotech",
-    "Web Development",
-    "Mobile App Development",
-    "Software Solutions",
-    "Next.js Development",
-    "React Native",
-    "Enterprise Software",
+    "Web Development India",
+    "Mobile App Development Perambalur",
+    "Custom Software Development",
+    "E-commerce Website Design",
+    "SaaS Product Development",
+    "UI/UX Design Services",
+    "Next.js Agency India",
+    "React Native App Development",
+    "Fintech App Solutions",
+    "Admin Dashboard Development",
+    "Cloud Infrastructure Services",
+    "SEO Services for Businesses",
+    "API Development and Integration",
+    "Full Stack Development",
+    "Frontend Development Services",
+    "Backend Engineering",
+    "Node.js Development",
+    "Real-time Inventory Systems",
+    "CRM Software Development",
+    "Digital Transformation Agency",
+    "Tech Support for Startups",
+    "IT Consulting Perambalur",
+    "App Development Tamil Nadu",
+    "Web Design Coimbatore",
+    "Progressive Web Apps (PWA)",
+    "Responsive Web Design",
+    "Hybrid Mobile Applications",
+    "Scalable Web Applications",
+    "Affordable IT Solutions India",
+    "Software Startup Solutions",
+    "Web Portals Development"
   ],
-
 
   icons: {
     icon: "/cobeno_logo.png",
@@ -24,14 +48,14 @@ export const metadata = {
 
   /* 🔹 Open Graph (Facebook, Instagram, LinkedIn) */
   openGraph: {
-    title: "Cobenoinfotech | Web & Mobile Solutions",
+    title: "Cobenoinfotech | High-Performance Web & Mobile Solutions",
     description:
-      "Professional web and mobile development services. Build high-performance digital products with Cobenoinfotech.",
-    url: "https://www.cobenoinfotech.com", // change to your domain
+      "Transform your business with Cobenoinfotech's professional web and mobile development services. Specializing in scalable digital products.",
+    url: "https://www.cobenoinfotech.com",
     siteName: "Cobenoinfotech",
     images: [
       {
-        url: "/cobeno_logo.png", // best: 1200x630 image
+        url: "/cobeno_logo.png",
         width: 1200,
         height: 630,
         alt: "Cobenoinfotech - Premium Web & App Development",
@@ -41,13 +65,26 @@ export const metadata = {
     type: "website",
   },
 
-  /* 🔹 Twitter (also helps Instagram preview indirectly) */
+  /* 🔹 Twitter Support */
   twitter: {
     card: "summary_large_image",
-    title: "Cobenoinfotech | Web & App Development Services",
+    title: "Cobenoinfotech | Expert Software Development Agency",
     description:
-      "Empowering businesses through modern web and mobile solutions.",
+      "Building the next generation of web and mobile applications for global businesses.",
     images: ["/cobeno_logo.png"],
+  },
+  
+  /* 🔹 Robots & Search Indexing */
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 

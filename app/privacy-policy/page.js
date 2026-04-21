@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
                                     We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2 mt-4">
-                                    <li><strong>Service Delivery:</strong> To provide the web development and IT training services you have requested.</li>
+                                    <li><strong>Service Delivery:</strong> To provide the web and mobile development services you have requested.</li>
                                     <li><strong>Communication:</strong> To manage our relationship with you, including notifying you about changes to our terms or privacy policy.</li>
                                     <li><strong>Improvement:</strong> To use data analytics to improve our website, products/services, marketing, customer relationships and experiences.</li>
                                 </ul>
@@ -115,8 +115,8 @@ export default function PrivacyPolicy() {
                                 </p>
                                 <div className="mt-4 p-6 bg-blue-50 rounded-xl border border-blue-100">
                                     <p className="font-bold text-lg text-blue-900">Cobenoinfotech</p>
-                                    <p className="text-blue-800">Email: info@cobenoinfotech.com</p>
-                                    <p className="text-blue-800">Address:coimbatore, Tamil Nadu , India</p>
+                                    <p className="text-blue-800">Email: cobenoinfotech@gmail.com</p>
+                                    <p className="text-blue-800">Address: 1/291, Anna Nagar, Ogalur, Perambalur Dist, Kunnam Tk, PIN 621108</p>
                                 </div>
                             </div>
 

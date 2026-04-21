@@ -78,7 +78,7 @@ export default function TermsAndConditions() {
                                     All content included on this site, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of Cobenoinfotech or its content suppliers and protected by international copyright laws.
                                 </p>
                                 <p className="mt-2">
-                                    For our training programs, all course materials are provided for personal educational use only and may not be reproduced, distributed, or shared without explicit permission.
+                                    All specialized project assets and custom code remain protected under the agreed-upon contract terms.
                                 </p>
                             </div>
 
@@ -88,11 +88,11 @@ export default function TermsAndConditions() {
                                     4. Payment and Refunds
                                 </h2>
                                 <p>
-                                    Projects and training courses are subject to the payment terms agreed upon at the time of purchase or contract signing.
+                                    Projects are subject to the payment terms agreed upon at the time of purchase or contract signing.
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2 mt-4">
-                                    <li><strong>Web Development Services:</strong> Payments are typically milestone-based as per the project proposal.</li>
-                                    <li><strong>Training Programs:</strong> Fees must be paid in full prior to the commencement of the course unless an installment plan has been approved. Refunds are subject to our specific Refund Policy.</li>
+                                    <li><strong>Web & Mobile Development Services:</strong> Payments are typically milestone-based as per the project proposal.</li>
+                                    <li><strong>Maintenance & Support:</strong> Recurring fees are billed as per the service level agreement.</li>
                                 </ul>
                             </div>
 
@@ -116,7 +116,8 @@ export default function TermsAndConditions() {
                                 </p>
                                 <div className="mt-4 p-6 bg-purple-50 rounded-xl border border-purple-100">
                                     <p className="font-bold text-lg text-purple-900">Cobenoinfotech</p>
-                                    <p className="text-purple-800">Email: info@cobenoinfotech.com</p>
+                                    <p className="text-purple-800">Email: cobenoinfotech@gmail.com</p>
+                                    <p className="text-purple-800">Address: 1/291, Anna Nagar, Ogalur, Perambalur Dist, Kunnam Tk, PIN 621108</p>
                                 </div>
                             </div>
 
